@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Asansör Çözümleri - Yüksek kaliteli, güvenli ve estetik asansör sistemleri. Yolcu, yük ve engelli asansörleri üretimi ve montajı.">
+    <meta name="keywords" content="asansör, yük asansörü, engelli asansörü, asansör bakım, akıllı asansör, asansör firması">
+    <title>Premium Asansör | Profesyonel Asansör Çözümleri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #005BAA;
+            --primary-dark: #003D73;
+            --secondary: #FF6B00;
+            --secondary-light: #FF8C42;
+            --dark: #2D3748;
+            --gray: #4A5568;
+            --light: #F7FAFC;
+            --white: #FFFFFF;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--light);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary);
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        .text-secondary {
+            color: var(--secondary);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 800px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .hero-btns .btn {
+            min-width: 180px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 80px;
+            animation: fadeInUp 1s ease 0.9s forwards;
+            opacity: 0;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            color: var(--secondary);
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-img img {
+            transition: var(--transition);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        .about-features {
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 25px;
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-content p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .service-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .service-more i {
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+
+        .service-more:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Projects Section */
+        .projects {
+            background: var(--white);
+        }
+
+        .projects-filter {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            background: var(--light);
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .project-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 91, 170, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: var(--transition);
+            padding: 20px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-card:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-overlay p {
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: var(--white);
+            position: relative;
+        }
+
+        .testimonials .section-title h2,
+        .testimonials .section-title p {
+            color: var(--white);
+        }
+
+        .testimonials .section-title h2::after {
+            background: var(--secondary);
+        }
+
+        .testimonial-slider {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 0 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--secondary);
+            opacity: 0.5;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            border: 3px solid var(--secondary);
+        }
+
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--light);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-text h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .contact-text a:hover {
+            color: var(--secondary);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 91, 170, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 80px 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary);
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .footer-links a i {
+            margin-right: 8px;
+            font-size: 0.8rem;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Live Chat Button */
+        .live-chat {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+
+        .chat-btn {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 20px rgba(255, 107, 0, 0.3);
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .chat-btn:hover {
+            background: var(--secondary-light);
+            transform: scale(1.1);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1001;
+            overflow-y: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            padding: 40px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            transform: translateY(-50px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--secondary);
+            transform: rotate(90deg);
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .modal-body {
+            margin-bottom: 30px;
+        }
+
+        .modal-img {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .modal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                order: -1;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                transition: var(--transition);
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-btns .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            .modal-content {
+                width: 95%;
+                padding: 25px 15px;
+            }
+
+            .modal-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-elevator"></i>
+                    <span>PREMIUM ASANSÖR</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Anasayfa</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#services">Hizmetler</a></li>
+                    <li><a href="#projects">Projeler</a></li>
+                    <li><a href="#testimonials">Referanslar</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Profesyonel Asansör Çözümleri</h1>
+                <p>20 yıllık uzmanlık ve yenilikçi teknolojilerle konforlu, güvenli ve estetik asansör sistemleri sunuyoruz.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Ücretsiz Keşif</a>
+                    <a href="#projects" class="btn btn-secondary">Projelerimiz</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Tamamlanan Proje</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>Yıllık Deneyim</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>%100</h3>
+                        <p>Müşteri Memnuniyeti</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hakkımızda</h2>
+                <p>Premium Asansör olarak sektördeki 20 yılı aşkın deneyimimizle kaliteyi ve güveni ön planda tutuyoruz.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Neden Bizi Tercih Etmelisiniz?</h3>
+                    <p>Premium Asansör, sektördeki yenilikleri takip eden, müşteri memnuniyetini her şeyin üzerinde tutan ve kaliteli hizmet anlayışıyla hareket eden bir firmadır.</p>
+                    <p>Uzman ekibimiz ve geniş ürün yelpazemizle konut, ofis, AVM, hastane ve endüstriyel tesisler için özel asansör çözümleri sunmaktayız.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h4>Kalite Belgeli</h4>
+                                <p>TSE, CE ve uluslararası sertifikalara sahibiz</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h4>7/24 Destek</h4>
+                                <p>Acil durumlarda anında müdahale ekibimiz</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h4>Enerji Verimli</h4>
+                                <p>%40'a varan enerji tasarrufu sağlayan sistemler</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1581093196271-cb6a5bc7b9d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Premium Asansör">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hizmetlerimiz</h2>
+                <p>İhtiyaçlarınıza özel çözümler sunuyor, her projeye özel tasarımlar geliştiriyoruz.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="passenger">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Yolcu Asansörü">
+                    </div>
+                    <div class="service-content">
+                        <h3>Yolcu Asansörleri</h3>
+                        <p>Konforlu, sessiz ve estetik tasarımlarla günlük yaşamı kolaylaştıran premium yolcu asansörleri.</p>
+                        <span class="service-more">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="service-card" data-service="cargo">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Yük Asansörü">
+                    </div>
+                    <div class="service-content">
+                        <h3>Yük Asansörleri</h3>
+                        <p>Endüstriyel ihtiyaçlar için yüksek kapasiteli, dayanıklı ve güvenli yük asansör sistemleri.</p>
+                        <span class="service-more">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="service-card" data-service="disabled">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Engelli Asansörü">
+                    </div>
+                    <div class="service-content">
+                        <h3>Engelli Asansörleri</h3>
+                        <p>Erişilebilir yaşam alanları için güvenli, kullanımı kolay ve konforlu engelli asansörleri.</p>
+                        <span class="service-more">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projelerimiz</h2>
+                <p>Tamamladığımız bazı önemli projelerden örnekler</p>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Tümü</button>
+                <button class="filter-btn" data-filter="residential">Konut</button>
+                <button class="filter-btn" data-filter="commercial">Ticari</button>
+                <button class="filter-btn" data-filter="hospital">Hastane</button>
+                <button class="filter-btn" data-filter="industrial">Endüstriyel</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="residential">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Lüks Rezidans Projesi">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Lüks Rezidans</h3>
+                        <p>İstanbul'da 32 katlı lüks rezidans için premium asansör çözümleri</p>
+                        <button class="btn btn-secondary view-project">Proje Detayları</button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="commercial">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="AVM Projesi">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Mega AVM</h3>
+                        <p>Ankara'da 50.000m² alana kurulu AVM için 12 adet yolcu asansörü</p>
+                        <button class="btn btn-secondary view-project">Proje Detayları</button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="hospital">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Hastane Projesi">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Şehir Hastanesi</h3>
+                        <p>İzmir'deki yeni şehir hastanesi için engelli ve hasta asansörleri</p>
+                        <button class="btn btn-secondary view-project">Proje Detayları</button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="industrial">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Endüstriyel Proje">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Otomotiv Fabrikası</h3>
+                        <p>Bursa'daki otomotiv fabrikası için 5 ton kapasiteli yük asansörleri</p>
+                        <button class="btn btn-secondary view-project">Proje Detayları</button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="residential">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Rezidans Projesi">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Gökdelen Projesi</h3>
+                        <p>İstanbul'da 40 katlı ofis binası için hızlı asansör sistemleri</p>
+                        <button class="btn btn-secondary view-project">Proje Detayları</button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="commercial">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Otel Projesi">
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Lüks Otel</h3>
+                        <p>Antalya'da 5 yıldızlı otel için panoramik asansör çözümleri</p>
+                        <button class="btn btn-secondary view-project">Proje Detayları</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Müşteri Yorumları</h2>
+                <p>Bizimle çalışan müşterilerimizin deneyimleri</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Premium Asansör ile çalıştığımız için çok memnunuz. Profesyonel ekip, zamanında teslimat ve kaliteli ürün. Özellikle satış sonrası destekleri çok başarılı.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmet Yılmaz">
+                        </div>
+                        <div class="author-info">
+                            <h4>Ahmet Yılmaz</h4>
+                            <p>XYZ İnşaat, Genel Müdür</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Hastanemiz için engelli asansörü ihtiyacımız vardı. Premium Asansör ekibi, ihtiyaçlarımızı çok iyi analiz ederek mükemmel bir çözüm sundu. Tüm personelimiz ve hastalarımız çok memnun.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Ayşe Demir">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Ayşe Demir</h4>
+                            <p>ABC Hastanesi, Başhekim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Rezidans projemiz için 8 adet asansör temin ettik. Tüm süreç boyunca profesyonelce ilgilendiler. Özellikle tasarım aşamasında estetik kaygılarımızı çok iyi anladılar ve harika bir sonuç elde ettik.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Mehmet Kaya">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mehmet Kaya</h4>
+                            <p>Prestij Yapı, Proje Müdürü</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>İletişim</h2>
+                <p>Bize ulaşın, uzman ekibimiz sizinle en kısa sürede iletişime geçsin</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Adres</h3>
+                            <p>Maslak Mah. Büyükdere Cad. No:123<br>Şişli/İstanbul</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Telefon</h3>
+                            <a href="tel:+902123456789">0 (212) 345 67 89</a><br>
+                            <a href="tel:+905554443322">0 (555) 444 33 22</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>E-posta</h3>
+                            <a href="mailto:info@premiumasansor.com">info@premiumasansor.com</a><br>
+                            <a href="mailto:satis@premiumasansor.com">satis@premiumasansor.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Çalışma Saatleri</h3>
+                            <p>Pazartesi - Cuma: 09:00 - 18:00<br>
+                            Cumartesi: 10:00 - 15:00</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Adınız Soyadınız</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-posta Adresiniz</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon Numaranız</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">İlgilendiğiniz Hizmet</label>
+                        <select id="service" class="form-control">
+                            <option value="">Lütfen seçiniz</option>
+                            <option value="passenger">Yolcu Asansörü</option>
+                            <option value="cargo">Yük Asansörü</option>
+                            <option value="disabled">Engelli Asansörü</option>
+                            <option value="maintenance">Bakım Hizmeti</option>
+                            <option value="other">Diğer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajınız</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Mesaj Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col footer-about">
+                    <h3>Premium Asansör</h3>
+                    <p>20 yılı aşkın deneyimimizle konforlu, güvenli ve estetik asansör çözümleri sunuyoruz. Kalite ve müşteri memnuniyeti bizim için her zaman öncelikli olmuştur.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Anasayfa</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Hakkımızda</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Hizmetler</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projeler</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Referanslar</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="service-link" data-service="passenger"><i class="fas fa-chevron-right"></i> Yolcu Asansörleri</a></li>
+                        <li><a href="#" class="service-link" data-service="cargo"><i class="fas fa-chevron-right"></i> Yük Asansörleri</a></li>
+                        <li><a href="#" class="service-link" data-service="disabled"><i class="fas fa-chevron-right"></i> Engelli Asansörleri</a></li>
+                        <li><a href="#" class="service-link" data-service="smart"><i class="fas fa-chevron-right"></i> Akıllı Asansör Sistemleri</a></li>
+                        <li><a href="#" class="service-link" data-service="maintenance"><i class="fas fa-chevron-right"></i> Asansör Bakım Hizmetleri</a></li>
+                        <li><a href="#" class="service-link" data-service="modernization"><i class="fas fa-chevron-right"></i> Modernizasyon</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>İletişim</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Maslak Mah. Büyükdere Cad. No:123 Şişli/İstanbul</p>
+                        <p><i class="fas fa-phone-alt"></i> 0 (212) 345 67 89</p>
+                        <p><i class="fas fa-envelope"></i> info@premiumasansor.com</p>
+                        <p><i class="fas fa-clock"></i> Pzt-Cuma: 09:00-18:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Premium Asansör. Tüm hakları saklıdır. | <a href="#">Gizlilik Politikası</a> | <a href="#">Çerez Politikası</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Button -->
+    <div class="live-chat">
+        <button class="chat-btn">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <!-- Service Modals -->
+    <div id="passenger-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Yolcu Asansörleri</h2>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Yolcu Asansörü">
+                </div>
+                <p>Yolcu asansörlerimiz, konut, ofis, AVM ve diğer ticari yapılar için özel olarak tasarlanmıştır. Modern teknoloji ve estetik tasarımın mükemmel uyumuyla üretilen asansörlerimiz, kullanıcılarına konforlu ve güvenli bir ulaşım deneyimi sunar.</p>
+                <h3>Teknik Özellikler:</h3>
+                <ul>
+                    <li>Kapasite: 4-20 kişi</li>
+                    <li>Hız: 0.5-4 m/sn</li>
+                    <li>Enerji verimli motor sistemleri</li>
+                    <li>Sessiz çalışma</li>
+                    <li>Akıllı kontrol sistemleri</li>
+                    <li>Çeşitli kabin tasarım seçenekleri</li>
+                </ul>
+                <p>Yolcu asansörlerimiz, uluslararası standartlara uygun olarak üretilmekte ve TSE, CE gibi sertifikalara sahiptir. Özel tasarım seçenekleriyle mimari projelere uyum sağlayabilirler.</p>
+            </div>
+            <a href="#contact" class="btn btn-primary">Teklif Alın</a>
+        </div>
+    </div>
+
+    <div id="cargo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Yük Asansörleri</h2>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Yük Asansörü">
+                </div>
+                <p>Endüstriyel ihtiyaçlar için özel olarak tasarlanan yük asansörlerimiz, ağır yüklerin güvenli ve hızlı bir şekilde taşınmasını sağlar. Fabrikalar, depolar, otoparklar ve diğer endüstriyel tesisler için ideal çözümler sunuyoruz.</p>
+                <h3>Teknik Özellikler:</h3>
+                <ul>
+                    <li>Kapasite: 250 kg - 20 ton</li>
+                    <li>Hız: 0.25-1 m/sn</li>
+                    <li>Geniş kabin seçenekleri</li>
+                    <li>Yüksek dayanıklılık</li>
+                    <li>Özel güvenlik sistemleri</li>
+                    <li>Dış mekan kullanımına uygun modeller</li>
+                </ul>
+                <p>Yük asansörlerimiz, işletmenizin ihtiyaçlarına göre özelleştirilebilir. Hidrolik veya elektrikli sistem seçenekleriyle farklı mimari yapılara uyum sağlayabilirler.</p>
+            </div>
+            <a href="#contact" class="btn btn-primary">Teklif Alın</a>
+        </div>
+    </div>
+
+    <div id="disabled-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title">Engelli Asansörleri</h2>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img src="https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Engelli Asansörü">
+                </div>
+                <p>Engelli asansörlerimiz, hareket kısıtlılığı olan bireylerin yaşam alanlarında özgürce hareket edebilmeleri için tasarlanmıştır. Hastaneler, alışveriş merkezleri, kamu binaları ve konut projeleri için erişilebilir çözümler sunuyoruz.</p>
+                <h3>Teknik Özellikler:</h3>
+                <ul>
+                    <li>Kapasite: 250-1000 kg</li>
+                    <li>Hız: 0.15-0.5 m/sn</li>
+                    <li>Geniş kabin tasarımı (tekerlekli sandalye uyumlu)</li>
+                    <li>Kolay kullanım için özel kontrol paneli</li>
+                    <li>Acil durum sistemleri</li>
+                    <li>Düşük enerji tüketimi</li>
+                </ul>
+                <p>Engelli asansörlerimiz, erişilebilirlik standartlarına tam uyumludur. Kullanıcı güvenliği ön planda tutularak tasarlanan sistemlerimiz, uzun ömürlü ve bakım gerektirmeyen yapılarıyla öne çıkar.</p>
+            </div>
+            <a href="#contact" class="btn btn-primary">Teklif Alın</a>
+        </div>
+    </div>
+
+    <!-- Project Modal Template -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title" id="project-modal-title">Proje Başlığı</h2>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img id="project-modal-img" src="" alt="Proje Görseli">
+                </div>
+                <p id="project-modal-description">Proje açıklaması burada yer alacak.</p>
+                <h3>Proje Detayları:</h3>
+                <ul id="project-modal-details">
+                    <!-- Dinamik olarak eklenecek -->
+                </ul>
+                <div id="project-modal-gallery" class="project-gallery">
+                    <!-- Dinamik olarak eklenecek -->
+                </div>
+            </div>
+            <a href="#contact" class="btn btn-primary">Benzer Proje İçin Teklif Alın</a>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if(this.getAttribute('href') === '#') return;
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if(navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Projects Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if(filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Testimonial Slider (Simple Version)
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.style.display = i === index ? 'block' : 'none';
+            });
+        }
+        
+        // Initialize
+        showTestimonial(currentTestimonial);
+        
+        // Auto rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Form Submission
+        const contactForm = document.querySelector('.contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.');
+            contactForm.reset();
+        });
+
+        // Live Chat Button
+        const chatBtn = document.querySelector('.chat-btn');
+        chatBtn.addEventListener('click', () => {
+            alert('Canlı destek hattına yönlendiriliyorsunuz...');
+        });
+
+        // Modal Functionality
+        const modals = document.querySelectorAll('.modal');
+        const closeModalBtns = document.querySelectorAll('.close-modal');
+        
+        // Service Modals
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const serviceType = card.getAttribute('data-service');
+                const modal = document.getElementById(`${serviceType}-modal`);
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Project Modals
+        const projectViewBtns = document.querySelectorAll('.view-project');
+        projectViewBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const projectCard = btn.closest('.project-card');
+                const projectTitle = projectCard.querySelector('.project-overlay h3').textContent;
+                const projectDesc = projectCard.querySelector('.project-overlay p').textContent;
+                const projectImg = projectCard.querySelector('.project-img img').src;
+                
+                // Set modal content
+                document.getElementById('project-modal-title').textContent = projectTitle;
+                document.getElementById('project-modal-img').src = projectImg;
+                document.getElementById('project-modal-img').alt = projectTitle;
+                document.getElementById('project-modal-description').textContent = projectDesc;
+                
+                // Set project details based on category
+                const projectCategory = projectCard.getAttribute('data-category');
+                const detailsList = document.getElementById('project-modal-details');
+                detailsList.innerHTML = '';
+                
+                let details = [];
+                switch(projectCategory) {
+                    case 'residential':
+                        details = [
+                            'Proje Türü: Konut',
+                            'Asansör Sayısı: 4',
+                            'Kapasite: 8 kişi',
+                            'Hız: 1.6 m/sn',
+                            'Tamamlanma Tarihi: 2023'
+                        ];
+                        break;
+                    case 'commercial':
+                        details = [
+                            'Proje Türü: Ticari',
+                            'Asansör Sayısı: 12',
+                            'Kapasite: 10-20 kişi',
+                            'Hız: 2.5 m/sn',
+                            'Tamamlanma Tarihi: 2022'
+                        ];
+                        break;
+                    case 'hospital':
+                        details = [
+                            'Proje Türü: Hastane',
+                            'Asansör Sayısı: 8',
+                            'Kapasite: 15 kişi (hasta yatağı uyumlu)',
+                            'Hız: 1.0 m/sn',
+                            'Tamamlanma Tarihi: 2021'
+                        ];
+                        break;
+                    case 'industrial':
+                        details = [
+                            'Proje Türü: Endüstriyel',
+                            'Asansör Sayısı: 6',
+                            'Kapasite: 5 ton',
+                            'Hız: 0.5 m/sn',
+                            'Tamamlanma Tarihi: 2020'
+                        ];
+                        break;
+                }
+                
+                details.forEach(detail => {
+                    const li = document.createElement('li');
+                    li.textContent = detail;
+                    detailsList.appendChild(li);
+                });
+                
+                // Open modal
+                document.getElementById('project-modal').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close modals
+        closeModalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modals.forEach(modal => modal.classList.remove('active'));
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Close modal when clicking outside
+        modals.forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if(e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // Service links in footer
+        const serviceLinks = document.querySelectorAll('.service-link');
+        serviceLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const serviceType = link.getAttribute('data-service');
+                const modal = document.getElementById(`${serviceType}-modal`);
+                if(modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Animation on Scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.service-card, .project-card, .testimonial-card, .contact-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if(elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.service-card, .project-card, .testimonial-card, .contact-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
